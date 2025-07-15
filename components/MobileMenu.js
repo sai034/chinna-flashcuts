@@ -69,18 +69,11 @@ export default function MobileMenu() {
         <div className="flex justify-center items-center m-auto">
           <TiFlash className="text-blue-400 text-2xl" />
           <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent ml-2">
-            Chinna FlashCuts
+            Chinna&apos;s FlashCutss
           </span>
         </div>
 
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="p-3 bg-[#25D366] text-white rounded-full hover:bg-[#128C7E] transition-all"
-        >
-          <FaWhatsapp size={20} />
-        </a>
+
       </div>
 
       {/* Overlay */}
@@ -111,7 +104,7 @@ export default function MobileMenu() {
               <div className="flex items-center">
                 <TiFlash className="text-blue-400 text-2xl mr-2" />
                 <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent">
-                  Chinna FlashCuts
+                  Chinna&apos;s FlashCutss
                 </span>
               </div>
               <button
@@ -177,13 +170,13 @@ export default function MobileMenu() {
                                 <button
                                   onClick={() => handleNavigation(subItem.href)}
                                   className={`flex items-center w-full p-3 rounded-lg transition-all ${pathname === subItem.href
-                                      ? 'bg-blue-900/50 text-white'
-                                      : 'text-gray-300 hover:text-white hover:bg-gray-800'
+                                    ? 'bg-blue-900/50 text-white'
+                                    : 'text-gray-300 hover:text-white hover:bg-gray-800'
                                     }`}
                                 >
                                   <span className={`mr-3 ${pathname === subItem.href
-                                      ? 'text-blue-400'
-                                      : 'text-gray-400'
+                                    ? 'text-blue-400'
+                                    : 'text-gray-400'
                                     }`}>
                                     {subItem.icon}
                                   </span>
@@ -199,13 +192,13 @@ export default function MobileMenu() {
                     <button
                       onClick={() => handleNavigation(item.href)}
                       className={`flex items-center w-full p-3 rounded-lg transition-all ${pathname === item.href
-                          ? 'bg-blue-900 text-white'
-                          : 'text-gray-300 hover:text-white hover:bg-gray-800'
+                        ? 'bg-blue-900 text-white'
+                        : 'text-gray-300 hover:text-white hover:bg-gray-800'
                         }`}
                     >
                       <span className={`mr-3 ${pathname === item.href
-                          ? 'text-blue-400'
-                          : 'text-gray-400'
+                        ? 'text-blue-400'
+                        : 'text-gray-400'
                         }`}>
                         {item.icon}
                       </span>

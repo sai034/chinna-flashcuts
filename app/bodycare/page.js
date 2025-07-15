@@ -1,32 +1,37 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-
+import { FaArrowLeft } from "react-icons/fa6";
 export default function SpaService() {
   const phoneNumber = '9985303562';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=Hi%20Chinna%20FlashCuts,%20I%20would%20like%20to%20book%20an%20appointment`;
   const spaTreatments = [
     {
-      name: "Aromatherapy Massage",
-      description: "Customized massage using essential oils to promote relaxation, relieve stress, and enhance mood through the power of scent and touch."
+      name: "Body Massage",
+      description: "A relaxing full-body therapy that relieves muscle tension, improves circulation, and promotes overall relaxation and well-being."
     },
     {
-      name: "Hot Stone Therapy",
-      description: "Warm basalt stones melt away tension in this deeply relaxing treatment that improves circulation and promotes deep muscle relaxation."
+      name: "Head Massage",
+      description: "A soothing massage focusing on the scalp, neck, and shoulders to reduce stress, enhance blood flow, and promote mental clarity."
     },
     {
-      name: "Detox Body Wrap",
-      description: "Purifying treatment that draws out impurities while hydrating skin with mineral-rich clays and algae extracts for a refreshed feeling."
+      name: "Foot Massage",
+      description: "A therapeutic treatment applying pressure to specific areas of the feet to ease fatigue, improve circulation, and restore balance."
     },
     {
-      name: "Signature Body Scrub",
-      description: "Exfoliating treatment using natural salts or sugars combined with nourishing oils to reveal silky smooth, radiant skin."
+      name: "Full Body Massage – ₹1199",
+      description: "An indulgent full-body massage session designed to relax the muscles, reduce stress, and leave you feeling rejuvenated."
     },
     {
-      name: "Couple's Retreat Package",
-      description: "Shared experience featuring side-by-side massages in a private suite with champagne toast and chocolate-dipped strawberries."
+      name: "Pedicure",
+      description: "A revitalizing foot care treatment that includes exfoliation, nail shaping, and massage for clean, soft, and refreshed feet."
+    },
+    {
+      name: "Manicure",
+      description: "A grooming treatment for the hands that includes nail trimming, cuticle care, exfoliation, and massage for polished, smooth hands."
     }
   ];
+
 
   return (
     <div className="relative group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 h-full mt-24 sm:mt-20 md:mt-0">
@@ -67,6 +72,15 @@ export default function SpaService() {
         <div className='flex flex-row justify-between'>
           <div className="flex justify-center">
             <a
+              href="/"
+              className="flex items-center gap-2 px-6 py-3 bg-[#2563EB] hover:bg-blue-700 text-white rounded-lg font-medium text-center transition-colors duration-300 w-full sm:w-auto"
+            >
+              <FaArrowLeft />
+              Home
+            </a>
+          </div>
+          <div className="flex justify-center">
+            <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -79,14 +93,7 @@ export default function SpaService() {
 
           </div>
 
-          <div className="flex justify-center">
-            <a
-              href='/'
-              className="px-6 py-3 bg-gray-600 hover:bg-gray-800 text-white rounded-lg font-medium text-center transition-colors duration-300 w-full sm:w-auto"
-            >
-              Home
-            </a>
-          </div>
+
         </div>
       </div>
     </div>

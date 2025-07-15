@@ -10,26 +10,32 @@ export default function Contact() {
 
   const franchises = [
     {
-      name: "Tirupati Main Branch",
-      address: "123 Main Road, Tirupati, Andhra Pradesh 517501",
-      mapLink: "https://maps.app.goo.gl/wg6CP8kBzfBHLcJr9",
-      phone: "+919985303562",
-      hours: "9:00 AM - 8:00 PM (Daily)"
+      name: "Balaji Colony",
+      address: "Ground Floor, PVR Plaza, 1-5-509, Balaji Colony, Tirupati, Andhra Pradesh 517501",
+      mapLink: 'https://maps.app.goo.gl/UAbYakfYXA4L3Wa46',
+      phone: '+919985303562',
+      hours: "7:30 AM - 9:30 PM (Daily)",
+      image: "/images/ChinnaBranch1.jpg"
     },
     {
-      name: "Renigunta Branch",
-      address: "456 Gandhi Road, Renigunta, Andhra Pradesh 517520",
-      mapLink: "https://maps.app.goo.gl/wg6CP8kBzfBHLcJr9",
-      phone: "+919876543211",
-      hours: "10:00 AM - 7:00 PM (Daily)"
+      name: "RN Mada Steet",
+
+      address: "Opposite S.V. Oriental College Boys Hostel, Andhra Pradesh 517101",
+      mapLink: "https://maps.app.goo.gl/jQaYKr3yzUoBZRiG8?g_st=aw",
+      phone: '+919985303562',
+      hours: "7:30 AM - 9:30 PM (Daily)",
+      image: "/images/ChinnaBranch2.jpg"
+
     },
     {
-      name: "Chandragiri Branch",
-      address: "789 Fort Road, Chandragiri, Andhra Pradesh 517101",
-      mapLink: "https://maps.app.goo.gl/wg6CP8kBzfBHLcJr9",
-      phone: "+919876543212",
-      hours: "10:00 AM - 7:00 PM (Daily)"
-    }
+      name: "RS Mada Street",
+      address: "#1-8-121,R.S.Mada Street, Andhra Pradesh 517101",
+      mapLink: 'https://maps.app.goo.gl/8wxgeqhbyMc2tbbQ9?g_st=aw',
+      phone: '+919985303562',
+      hours: "7:30 AM - 9:30 PM (Daily)",
+      image: "/images/ChinnaBranch3.jpg"
+    },
+
   ];
 
   return (
@@ -64,7 +70,7 @@ export default function Contact() {
               <div className="h-48 w-full relative">
                 <a href={branch.mapLink} target="_blank" rel="noopener noreferrer">
                   <img
-                    src={placeholderMapImage}
+                    src={branch.image}
                     alt={`${branch.name} Location`}
                     className="absolute top-0 left-0 w-full h-full object-cover"
                     loading="lazy"
@@ -178,7 +184,7 @@ export default function Contact() {
         >
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Transform Your Look?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Book your appointment now and experience the Chinna FlashCuts difference!
+            Book your appointment now and experience the Chinna&apos;s FlashCutss difference!
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">

@@ -3,13 +3,17 @@ import Sidebar from '../components/Sider';
 import MobileMenu from '../components/MobileMenu';
 
 export const metadata = {
-  title: 'Chinna FlashCuts - Beauty & Wellness',
+  title: 'Chinna FlashCutss - Beauty & Wellness',
   description: 'A modern beauty and wellness platform',
+
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+    <link rel="icon" type="image/x-icon"  href="/favicon.ico" />
+  </head>
       <body className="flex flex-col md:flex-row">
         <Sidebar />
         <MobileMenu />

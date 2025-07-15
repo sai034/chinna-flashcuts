@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import Link from 'next/link';
-
+import { FaArrowLeft } from "react-icons/fa6";
 export default function HairCareService() {
   const phoneNumber = '9985303562';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=Hi%20Chinna%20FlashCuts,%20I%20would%20like%20to%20book%20an%20appointment`;
@@ -19,6 +19,10 @@ export default function HairCareService() {
       description: "Deep conditioning ritual with hot oil massage, steam therapy, and nutrient-rich masks to repair damage and restore shine."
     },
     {
+      name: "Hair Smoothing and Straightening:",
+      description: "A professional treatment that tames frizz, reduces curl, and leaves hair sleek, shiny, and manageable for a long-lasting smooth look."
+    },
+    {
       name: "Scalp Rejuvenation Program",
       description: "Medical-grade treatment for dandruff, psoriasis, or thinning hair featuring exfoliation, medicated serums, and LED light therapy."
     },
@@ -29,7 +33,7 @@ export default function HairCareService() {
   ];
 
   return (
-    <div className="relative group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 h-full mt-24 sm:mt-20 md:mt-0">
+    <div className="relative group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 h-full mt-24 sm:mt-20 md:mt-0 ml-1">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3998421/pexels-photo-3998421.jpeg')] bg-cover bg-center z-0 group-hover:scale-105 transition-transform duration-500">
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30 z-0"></div>
@@ -66,6 +70,15 @@ export default function HairCareService() {
         <div className='flex flex-row justify-between'>
           <div className="flex justify-center">
             <a
+              href="/"
+              className="flex items-center gap-2 px-6 py-3 bg-[#2563EB] hover:bg-blue-700 text-white rounded-lg font-medium text-center transition-colors duration-300 w-full sm:w-auto"
+            >
+              <FaArrowLeft />
+              Home
+            </a>
+          </div>
+          <div className="flex justify-center">
+            <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -77,14 +90,8 @@ export default function HairCareService() {
 
 
           </div>
-          <div className="flex justify-center">
-            <a
-              href='/'
-              className="px-6 py-3 bg-gray-600 hover:bg-gray-800 text-white rounded-lg font-medium text-center transition-colors duration-300 w-full sm:w-auto"
-            >
-              Home
-            </a>
-          </div>
+
+
         </div>
       </div>
     </div>

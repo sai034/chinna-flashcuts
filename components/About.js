@@ -29,7 +29,7 @@ export default function About() {
       image: "/team-priya.jpg"
     }
   ];
- const carouselImages = [
+  const carouselImages = [
     'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     'https://images.unsplash.com/photo-1618219744090-3ac2a0a4b4c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     'https://images.unsplash.com/photo-1595475207225-428b62c44b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
@@ -40,7 +40,7 @@ export default function About() {
       <section className="relative h-96 overflow-hidden">
         <Image
           src="/salon-interior.jpg"
-          alt="Chinna FlashCuts Interior"
+          alt="Chinna FlashCutss Interior"
           fill
           className="object-cover opacity-70"
         />
@@ -65,7 +65,7 @@ export default function About() {
               </span> of Excellence
             </h2>
             <p className="text-lg leading-relaxed mb-6">
-              Established in 1999, Chinna FlashCuts began as a single-chair barbershop in the heart of Tirupati.
+              Established in 1999, Chinna&apos;s FlashCutss began as a single-chair barbershop in the heart of Tirupati.
               Through dedication to craft and client satisfaction, we&apos;ve grown into a multi-location luxury salon.
             </p>
             <p className="text-lg leading-relaxed mb-8">
@@ -96,7 +96,7 @@ export default function About() {
           <div className="relative h-80 lg:h-96 rounded-xl overflow-hidden shadow-xl">
             <Image
               src="/salon-history.jpg"
-              alt="Chinna FlashCuts in early days"
+              alt="Chinna FlashCutss in early days"
               fill
               className="object-cover"
             />
@@ -169,7 +169,7 @@ export default function About() {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-700">
         <div className="max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-3xl font-bold mb-6">Ready to Experience Chinna FlashCuts?</h2>
+          <h2 className="text-3xl font-bold mb-6">Ready to Experience Chinna&apos;s FlashCutss?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Book your appointment today and discover why we&apos;ve been Tirupati&apos;s favorite for 25 years
           </p>

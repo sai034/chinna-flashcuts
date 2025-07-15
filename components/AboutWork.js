@@ -1,3 +1,5 @@
+
+
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -6,6 +8,7 @@ import { FiMapPin, FiChevronRight, FiX, FiChevronLeft } from 'react-icons/fi';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Modal from 'react-modal';
+import Services from './Services';
 
 if (typeof window !== 'undefined') {
   Modal.setAppElement('#root');
@@ -36,35 +39,37 @@ export default function AboutWork() {
 
   const franchises = [
     {
-      name: "Tirupati Main Branch",
-      address: "https://maps.app.goo.gl/wg6CP8kBzfBHLcJr9",
-      phone: "+919876543210"
+      name: 'Balaji Colony',
+      address: 'https://maps.app.goo.gl/UAbYakfYXA4L3Wa46',
+      phone: '+919985303562',
     },
     {
-      name: "Renigunta Branch",
-      address: "https://maps.app.goo.gl/wg6CP8kBzfBHLcJr9",
-      phone: "+919876543211"
+      name: 'RN Mada Street',
+      address: 'https://maps.app.goo.gl/jQaYKr3yzUoBZRiG8?g_st=aw',
+      phone: '+919985303562',
     },
     {
-      name: "Chandragiri Branch",
-      address: "https://maps.app.goo.gl/wg6CP8kBzfBHLcJr9",
-      phone: "+919876543212"
-    }
+      name: 'RS Mada Street',
+      address: 'https://maps.app.goo.gl/8wxgeqhbyMc2tbbQ9?g_st=aw',
+      phone: '+919985303562',
+    },
   ];
 
   const carouselImages = [
-    'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1618219744090-3ac2a0a4b4c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1595475207225-428b62c44b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    '/images/ChinnaBranch1.jpg',
+    '/images/ChinnaBranch1-2.jpg',
+    '/images/ChinnaBranch1-3.jpg',
+    '/images/ChinnaBranch1-4.jpg',
+    '/images/ChinnaBranch1-5.jpg',
+    '/images/ChinnaBranch1-6.jpg',
   ];
 
   const openModal = (startIndex = 0) => {
     setCurrentImageIndex(startIndex);
     setModalIsOpen(true);
 
-    // Start automatic cycling every 2 seconds
     const interval = setInterval(() => {
-      setCurrentImageIndex(prevIndex =>
+      setCurrentImageIndex((prevIndex) =>
         prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
       );
     }, 2000);
@@ -81,13 +86,13 @@ export default function AboutWork() {
   };
 
   const goToPreviousImage = () => {
-    setCurrentImageIndex(prevIndex =>
+    setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? carouselImages.length - 1 : prevIndex - 1
     );
   };
 
   const goToNextImage = () => {
-    setCurrentImageIndex(prevIndex =>
+    setCurrentImageIndex((prevIndex) =>
       prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
     );
   };
@@ -120,17 +125,17 @@ export default function AboutWork() {
             border: 'none',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
           },
           overlay: {
-            zIndex: 1000
-          }
+            zIndex: 1000,
+          },
         }}
       >
         <div className="relative w-full h-full flex items-center justify-center">
           <button
             onClick={closeModal}
-            className="absolute top-4 right-4 text-white bg-black/50 rounded-full p-2 hover:bg-black/80 transition-colors z-50"
+            className="cursor-pointer absolute top-4 right-4 text-white bg-black/50 rounded-full p-2 hover:bg-black/80 transition-colors z-50"
             aria-label="Close modal"
           >
             <FiX size={24} />
@@ -138,7 +143,7 @@ export default function AboutWork() {
 
           <button
             onClick={goToPreviousImage}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-black/50 rounded-full p-2 hover:bg-black/80 transition-colors z-50"
+            className="cursor-pointer absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-black/50 rounded-full p-2 hover:bg-black/80 transition-colors z-50"
             aria-label="Previous image"
           >
             <FiChevronLeft size={24} />
@@ -152,16 +157,14 @@ export default function AboutWork() {
 
           <button
             onClick={goToNextImage}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-black/50 rounded-full p-2 hover:bg-black/80 transition-colors z-50"
+            className="cursor-pointer absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-black/50 rounded-full p-2 hover:bg-black/80 transition-colors z-50"
             aria-label="Next image"
           >
             <FiChevronRight size={24} />
           </button>
 
           <div className="absolute bottom-10 left-0 right-0 text-center">
-            <div className="inline-block bg-black/70 text-white px-4 py-2 rounded-lg">
-
-            </div>
+            <div className="inline-block bg-black/70 text-white px-4 py-2 rounded-lg"></div>
           </div>
         </div>
       </Modal>
@@ -169,7 +172,7 @@ export default function AboutWork() {
       <section className="bg-gray-800 text-white py-12 px-4 sm:px-6 lg:px-8 mt-4 mb-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent font-sans">
-            About Chinna FlashCuts - Tirupati
+            About Chinna&apos;s FlashCutss - Tirupati
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
@@ -187,7 +190,7 @@ export default function AboutWork() {
                   <div
                     key={index}
                     onClick={() => openModal(index)}
-                    className="cursor-pointer"
+                    className="cursor-pointer flex justify-center"
                     role="button"
                     tabIndex={0}
                     onKeyDown={(e) => e.key === 'Enter' && openModal(index)}
@@ -195,7 +198,7 @@ export default function AboutWork() {
                     <img
                       src={image}
                       alt={`ChinnaFlashCuts Spa ${index + 1}`}
-                      className="w-full h-64 sm:h-72 lg:h-[100%] object-cover rounded-lg transform hover:scale-105 transition-transform duration-300"
+                      className="w-1/2 h-68 object-cover rounded-lg transform hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                     />
                   </div>
@@ -208,7 +211,7 @@ export default function AboutWork() {
                 Established 25 years ago with a single franchise, ChinnaFlashCuts has grown into a trusted name in beauty and wellness, now proudly operating across three successful franchises, including our location in Tirupati.
               </p>
               <p className="text-md md:text-xl leading-relaxed font-sans">
-                At Chinna FlashCuts, we understand that every individual is unique. That's why our services are personalized to match your specific needs and preferences.
+                At Chinna&apos;s FlashCutss, we understand that every individual is unique. That's why our services are personalized to match your specific needs and preferences.
               </p>
             </div>
           </div>
@@ -258,7 +261,7 @@ export default function AboutWork() {
           </a>
         </div>
       </div>
-
+      <Services />
       <div className="bg-gray-800 text-white py-12 px-4 sm:px-6 lg:px-8 mt-4 mb-4">
         <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent font-sans">
           Our Franchises
@@ -291,7 +294,7 @@ export default function AboutWork() {
                   >
                     <div className="flex items-center">
                       <svg className="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5 öğrendim.2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                       <span>Call Now</span>
                     </div>

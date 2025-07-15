@@ -13,7 +13,6 @@ export default function Services() {
       description: 'Discover radiant skin with our tailored facial treatments, crafted to rejuvenate and enhance your unique complexion.',
       image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
       alt: 'Customized Facial Treatment',
-
     },
     {
       title: 'Advanced Hair Care Treatments',
@@ -30,35 +29,56 @@ export default function Services() {
   ];
   const franchises = [
     {
-      name: "Tirupati Main Branch",
-      address: "123+Main+Road+Tirupati+Andhra+Pradesh+517501",
-      phone: "+919876543210"
+      name: 'Tirupati Main Branch',
+      address: '123+Main+Road+Tirupati+Andhra+Pradesh+517501',
+      phone: '+919876543210',
     },
     {
-      name: "Renigunta Branch",
-      address: "456+Gandhi+Road+Renigunta+Andhra+Pradesh+517520",
-      phone: "+919876543211"
+      name: 'Renigunta Branch',
+      address: '456+Gandhi+Road+Renigunta+Andhra+Pradesh+517520',
+      phone: '+919876543211',
     },
     {
-      name: "Chandragiri Branch",
-      address: "789+Fort+Road+Chandragiri+Andhra+Pradesh+517101",
-      phone: "+919876543212"
-    }
+      name: 'Chandragiri Branch',
+      address: '789+Fort+Road+Chandragiri+Andhra+Pradesh+517101',
+      phone: '+919876543212',
+    },
   ];
-  // Replace with your actual address details
-  const businessAddress = "Chinna+FlashCuts+Tirupati+Andhra+Pradesh+517501";
+  const businessAddress = 'Chinna+FlashCuts+Tirupati+Andhra+Pradesh+517501';
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${businessAddress}`;
+
+  const tabs = [
+    { name: 'Bridal', href: '/bridal' },
+    { name: 'Skin', href: '/skincare' },
+    { name: 'Hair', href: '/haircare' },
+    { name: 'Body', href: '/bodycare' },
+  ];
+
   return (
-    <section className="bg-gray-800 py-16 px-4 sm:px-6 lg:px-8 mt-4">
+    <section className="bg-gray-800 py-10 px-4 sm:px-6 lg:px-8 mt-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <h2 className="text-2xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
+        <h2 className="text-2xl md:text-4xl font-bold text-center mb-10 bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
           Our Services
         </h2>
 
+        {/* Tabs Navigation */}
+        <nav className="text-white py-3 mb-8 rounded-lg shadow-md border-b border-gray-600">
+          <div className="flex justify-center space-x-2 sm:space-x-4">
+            {tabs.map((tab) => (
+              <Link
+                key={tab.name}
+                href={tab.href}
+                className="whitespace-nowrap px-2 sm:px-4 py-2 text-md sm:text-md md:text-base font-medium text-white hover:bg-gray-700 rounded-md transition-colors"
+              >
+                {tab.name}
+              </Link>
+            ))}
+          </div>
+        </nav>
+
         {/* Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 cursor-pointer">
-
           {services.map((service, index) => (
             <Link
               key={index}
@@ -94,10 +114,7 @@ export default function Services() {
             <span className="text-lg font-medium font-sans">Chat on WhatsApp</span>
           </a>
         </div>
-
       </div>
-
-
     </section>
   );
 }

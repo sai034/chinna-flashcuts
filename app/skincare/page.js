@@ -1,11 +1,32 @@
 "use client"
 import React from 'react';
 import Link from 'next/link';
-import { FaWhatsapp} from 'react-icons/fa';
+import { FaWhatsapp } from 'react-icons/fa';
+import { FaArrowLeft } from "react-icons/fa6";
 export default function FacialService() {
-      const phoneNumber = '9985303562';
+  const phoneNumber = '9985303562';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=Hi%20Chinna%20FlashCuts,%20I%20would%20like%20to%20book%20an%20appointment`;
   const facialTreatments = [
+    {
+      name: "Detan",
+      description: "Detan facials focus on removing tan and brightening the skin, often using natural or chemical agents to even out complexion."
+    },
+    {
+      name: "Fruit Facial",
+      description: "Fruit facials use natural fruit extracts (e.g., papaya, neem, tulsi, or almond oil) for cleansing, exfoliation, and hydration, often following a multi-step process."
+    },
+    {
+      name: "Gold Facial",
+      description: "Gold facials use 24-karat gold leaf, colloidal gold, or gold-infused products to promote a radiant, youthful glow."
+    },
+    {
+      name: "Diamond Facial",
+      description: "Diamond facials, such as DiamondGlow, use a diamond-tipped wand for manual exfoliation, paired with medical-grade serums to address specific skin concerns."
+    },
+    {
+      name: "O3 Facial",
+      description: "O3 facials use oxygen and ozone technology, combined with serums rich in vitamin C and other nutrients, to revitalize and brighten the skin."
+    },
     {
       name: "Deep Cleansing Facial",
       description: "A thorough cleansing treatment that removes impurities, excess oil, and dead skin cells using specialized techniques and products to unclog pores and prevent breakouts."
@@ -34,7 +55,7 @@ export default function FacialService() {
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center z-0 group-hover:scale-105 transition-transform duration-500">
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30 z-0"></div>
       </div>
-      
+
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
         <div className="mb-4">
@@ -43,10 +64,10 @@ export default function FacialService() {
           </span>
           <h3 className="text-2xl md:text-3xl font-bold mb-3">Premium Facial Treatments</h3>
           <p className="text-gray-200 mb-4">
-            Our expert estheticians customize each facial to your unique skin needs, combining advanced techniques with premium skincare products for visible results. 
+            Our expert estheticians customize each facial to your unique skin needs, combining advanced techniques with premium skincare products for visible results.
             Each treatment includes deep cleansing, exfoliation, extractions when needed, massage, mask, and hydration.
           </p>
-          
+
           <div className="mb-4">
             <h4 className="font-semibold mb-2 text-lg">Our Signature Treatments:</h4>
             <ul className="space-y-4">
@@ -62,31 +83,33 @@ export default function FacialService() {
             </ul>
           </div>
         </div>
-        
-      
+
+
         <div className='flex flex-row justify-between'>
-         <div className="flex justify-center">
-                        <a
-                          href={whatsappUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-            className="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium text-center transition-colors duration-300 w-full sm:w-auto"
-                        >
-                      
-                          Book Now
-                        </a>
-                        
-                   
-                      </div>
-                      <div className="flex justify-center">
-  <a
-    href='/'
-    className="px-6 py-3 bg-gray-600 hover:bg-gray-800 text-white rounded-lg font-medium text-center transition-colors duration-300 w-full sm:w-auto"
-  >
-    Home
-  </a>
-</div>
-                      </div>
+          <div className="flex justify-center">
+            <a
+              href="/"
+              className="flex items-center gap-2 px-6 py-3 bg-[#2563EB] hover:bg-blue-700 text-white rounded-lg font-medium text-center transition-colors duration-300 w-full sm:w-auto"
+            >
+              <FaArrowLeft />
+              Home
+            </a>
+          </div>
+          <div className="flex justify-center">
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium text-center transition-colors duration-300 w-full sm:w-auto"
+            >
+
+              Book Now
+            </a>
+
+
+          </div>
+
+        </div>
       </div>
     </div>
   );

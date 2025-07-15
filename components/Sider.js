@@ -78,8 +78,8 @@ export default function Sidebar() {
             >
               <div className="flex items-center cursor-pointer">
                 <TiFlash className="text-blue-400 text-2xl mr-2" />
-                <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent">
-                  Chinna FlashCuts
+                <span className="text-xl text-nowrap font-bold bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent">
+                  Chinna&apos;s FlashCutss
                 </span>
               </div>
             </motion.div>
@@ -103,8 +103,8 @@ export default function Sidebar() {
                 <div className="space-y-1 cursor-pointer">
                   <div
                     className={`flex items-center justify-between p-3 rounded-lg transition-all cursor-pointer ${pathname.startsWith('/services')
-                        ? 'bg-gray-800 text-white'
-                        : 'text-gray-400 hover:text-white hover:bg-gray-800'
+                      ? 'bg-gray-800 text-white'
+                      : 'text-gray-400 hover:text-white hover:bg-gray-800'
                       }`}
                     onClick={() => setServicesOpen(!servicesOpen)}
                   >
@@ -159,16 +159,16 @@ export default function Sidebar() {
                             <button
                               onClick={() => handleNavigation(subItem.href)}
                               className={`flex items-center w-full p-3 rounded-lg transition-all group cursor-pointer ${pathname === subItem.href
-                                  ? 'bg-blue-900/50 text-white'
-                                  : 'text-gray-300 hover:text-white hover:bg-gray-800'
+                                ? 'bg-blue-900/50 text-white'
+                                : 'text-gray-300 hover:text-white hover:bg-gray-800'
                                 }`}
                               onMouseEnter={() => setActiveMenu(subItem.name)}
                               onMouseLeave={() => setActiveMenu('')}
                             >
                               <span
                                 className={`mr-3 ${pathname === subItem.href
-                                    ? 'opacity-100 text-blue-400'
-                                    : 'opacity-80 group-hover:opacity-100'
+                                  ? 'opacity-100 text-blue-400'
+                                  : 'opacity-80 group-hover:opacity-100'
                                   }`}
                               >
                                 {subItem.icon}
@@ -195,8 +195,8 @@ export default function Sidebar() {
                 <button
                   onClick={() => handleNavigation(item.href)}
                   className={`flex items-center w-full p-3 rounded-lg transition-all cursor-pointer ${pathname === item.href
-                      ? 'bg-blue-900 text-white'
-                      : 'text-gray-400 hover:text-white hover:bg-gray-800'
+                    ? 'bg-blue-900 text-white'
+                    : 'text-gray-400 hover:text-white hover:bg-gray-800'
                     }`}
                 >
                   <span className={pathname === item.href ? 'text-blue-400' : ''}>
