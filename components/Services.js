@@ -103,7 +103,7 @@ export default function Services() {
         </div>
 
         <div className="text-center my-8">
-          <h3 className="text-2xl font-light text-gray-300 mb-4 font-sans">Book your appointment</h3>
+          <h3 className="text-2xl font-light text-gray-300 mb-4 font-sans">Book Now</h3>
           <a
             href={whatsappUrl}
             target="_blank"
